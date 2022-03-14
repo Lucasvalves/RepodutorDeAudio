@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./stylles/pg.css" >
+    <link rel="icon" href="./images/fone.png" type="image/png">
+    <title>Vibe Music</title>
+</head>
+<body>
+    <div id="container">
+      <h2>🌊 Vibe positiva</h2>
+      <div class="musica">
+          <img class="bordaimg" src="./images/bob.jpg" id="fotoMsc" />
+          <h2 id="title-msc">Titulo da Musica</h2>
+          <p id="artista">Artista</p>
+        </div>
+        <div class="player">
+          <audio id="musica">
+            <source class="srcMsc" src="./audios/bob.mp3" />
+          </audio>
+          <h4>
+            <span id="duracao">00:00 </span>
+            <input id="barradeTempo" ontouchend="SetTiming()" onclick="setTiming()" type="range" min="0" value="0" />
+            <span id="duracao"> 00:00</span>
+          </h4>
+          <ion-icon name="volume-high-outline" onclick="mutar()"></ion-icon>
+          <input id="volume" ontouchend="volumeMsc()" onclick="volumeMsc()" type="range" min="0" max="100" value="5">
+          <div class="botoes">
+            <ion-icon name="play-skip-back-outline" id="iconVoltar" onclick="voltar()"></ion-icon>
+            <ion-icon
+              name="play-outline"
+              id="iconPlay"
+              onclick="play()">
+            </ion-icon>
+            <ion-icon name="play-skip-forward-outline" id="iconProx" onclick="prox()"></ion-icon>             
+          </div>
+        </div>
+      </div>          
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./script/script.js"></script>
+</body>
+</html>
